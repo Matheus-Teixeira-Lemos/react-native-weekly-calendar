@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Text, View, TouchableOpacity, TouchableWithoutFeedback, Modal, Platform } from 'react-native';
 import PropTypes from 'prop-types';
 import moment from 'moment/min/moment-with-locales';
@@ -219,21 +219,6 @@ WeeklyCalendar.propTypes = {
     weekdayFormat: PropTypes.string,
     /** Set locale (e.g. Korean='ko', English='en', Chinese(Mandarin)='zh-cn', etc.) */
     locale: PropTypes.string,
-    /** Set list of events you want to display below weekly calendar. 
-     * Default is empty array []. */
-    events: PropTypes.array,
-    /** Specify how each event should be rendered below weekly calendar. Event & index are given as parameters. */
-    renderEvent: PropTypes.func,
-    /** Specify how first event should be rendered below weekly calendar. Event & index are given as parameters. */
-    renderFirstEvent: PropTypes.func,
-    /** Specify how last event should be rendered below weekly calendar. Event & index are given as parameters. */
-    renderLastEvent: PropTypes.func,
-    /** Specify how day should be rendered below weekly calendar. Event Views, day (Moment object), index are given as parameters. */
-    renderDay: PropTypes.func,
-    /** Specify how first day should be rendered below weekly calendar. Event Views, day (Moment object), index are given as parameters. */
-    renderFirstDay: PropTypes.func,
-    /** Specify how last day should be rendered below weekly calendar. Event Views, day (Moment object), index are given as parameters. */
-    renderLastDay: PropTypes.func,
     /** Handler which gets executed on day press. Default = undefined */
     onDayPress: PropTypes.func,
     /** Set theme color */
@@ -251,14 +236,7 @@ WeeklyCalendar.defaultProps = { // All props are optional
     startWeekday: 7,
     titleFormat: undefined,
     weekdayFormat: 'ddd',
-    locale: 'en',
-    events: [],
-    renderEvent: undefined,
-    renderFirstEvent: undefined,
-    renderLastEvent: undefined,
-    renderDay: undefined,
-    renderFirstDay: undefined,
-    renderLastDay: undefined,
+    locale: 'pt-BR',
     onDayPress: undefined,
     themeColor: '#46c3ad',
     style: {},
